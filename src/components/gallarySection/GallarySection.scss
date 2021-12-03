@@ -1,3 +1,7 @@
+// 1240px
+$largeScreen: 77.5em;
+// 875px
+$mediumScreen: 54.6875em;
 .GallarySection {
     // border: 5px solid black;
     display: grid;
@@ -7,13 +11,26 @@
     margin: 0 12.5rem;
     margin-bottom: 16rem;
     gap: 2.4rem;
+    @media screen and(max-width: $mediumScreen) {
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and(max-width: $largeScreen) {
+        grid-template-columns: (repeat(2, 1fr));
+        justify-items: center;
+    }
     .cart {
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: "Josefin Sans", sans-serif;
         width: 23.5rem;
+        // height: 41rem;
         position: relative;
         cursor: pointer;
+        overflow: hidden;
+        @media screen and(max-width: $largeScreen) {
+            min-width: 32rem;
+        }
         &::after {
-            content: '';
+            content: "";
             background-color: black;
             opacity: 1;
         }
@@ -23,6 +40,11 @@
             background-size: cover;
             background-position: center;
             z-index: -1;
+            &:hover {
+                opacity: 0.5;
+                transition: 3s;
+                transform: scale(1.2);
+            }
         }
         .title {
             color: hsl(0, 0%, 100%);
@@ -36,3 +58,12 @@
         }
     }
 }
+
+// meida query
+// 1240px - 77.5em
+// @media screen and (max-width: 77.5em) {
+//     .GallarySection {
+//         grid-template-columns: (repeat(2, 1fr));
+//         justify-items: center;
+//     }
+// }

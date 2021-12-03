@@ -1,12 +1,13 @@
-import React from "react";
-import "./CreationSection.scss"
+import "./CreationSection.scss";
+import BtnSeeAll from "../btnSeeAll/BtnSeeAll";
 
 function CreationSection() {
   return (
     <div>
       <div className="CreationSection">
         <div className="h2">OUR CREATIONS</div>
-        <div className="btn">SEE ALL</div>
+        <BtnSeeAll />
+        {/* <div className="btn">SEE ALL</div> */}
       </div>
     </div>
   );

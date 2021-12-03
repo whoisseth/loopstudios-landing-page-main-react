@@ -1,19 +1,28 @@
+// 875px
+$mediumScreen: 54.6875em;
 .CreationSection {
     margin: 0 12.8rem;
     margin-bottom: 8rem;
     display: flex;
     justify-content: space-between;
+    @media screen and(max-width: $mediumScreen) {
+        display: flex;
+        justify-content: center;
+        font-size: 2.4rem;
+        margin: 0 0;
+        margin-bottom: 4rem;
+    }
     .h2 {
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: "Josefin Sans", sans-serif;
         font-size: 4.6rem;
         color: #000;
+        @media screen and(max-width: $mediumScreen) {
+            font-size: 3.2rem;
+        }
     }
     .btn {
-        font-family: 'Alata', sans-serif;
-        background-color: #000;
-        color: hsl(0, 0%, 100%);
-        padding: 1.5rem 4rem;
-        letter-spacing: .5rem;
-        font-size: 1.5rem;
+        @media screen and(max-width: $mediumScreen) {
+            display: none;
+        }
     }
 }

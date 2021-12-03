@@ -1,5 +1,7 @@
+// 875px
+$mediumScreen: 54.6875em;
 .navbar {
-    font-family: 'Alata', sans-serif;
+    font-family: "Alata", sans-serif;
     margin: 6.4rem 12.8rem;
     justify-content: space-between;
     color: hsl(0, 0%, 100%);
@@ -15,8 +17,11 @@
             text-decoration: none;
             position: relative;
             // border: 2px solid red;
+            @media screen and(max-width: $mediumScreen) {
+                display: none;
+            }
             &:hover::after {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 100%;
                 height: 0.175rem;

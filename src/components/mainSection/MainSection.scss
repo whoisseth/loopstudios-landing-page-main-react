@@ -1,0 +1,13 @@
+// 875px
+$mediumScreen: 54.6875em;
+.mainSection {
+    margin: auto 0;
+    .btn-container {
+        @media screen and(max-width: $mediumScreen) {
+            display: flex;
+            justify-content: center;
+            margin-top: -12rem;
+            margin-bottom: 8rem;
+        }
+    }
+}

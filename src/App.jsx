@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Importing NavLinks
 import About from "./components/navLinks/About";
@@ -6,11 +6,9 @@ import Careers from "./components/navLinks/Careers";
 import Events from "./components/navLinks/Events";
 import Products from "./components/navLinks/Products";
 import Support from "./components/navLinks/Support";
-// Main components
+// components
 import Header from "./components/header/Header";
-import IntractiveSection from "./components/intractiveSection/IntractiveSection";
-import CreationSection from "./components/creationsSection/CreationSection";
-import GallarySection from "./components/gallarySection/GallarySection";
+import MainSection from "./components/mainSection/MainSection";
 import Footer from "./components/footerSection/Footer";
 
 function App() {
@@ -25,9 +23,7 @@ function App() {
           <Route path="/support" element={Support} />
         </Routes>
         <Header />
-        <IntractiveSection />
-        <CreationSection />
-        <GallarySection />
+        <MainSection />
         <Footer />
       </Router>
     </div>
