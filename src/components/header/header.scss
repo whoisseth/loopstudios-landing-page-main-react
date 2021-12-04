@@ -7,6 +7,7 @@ $mediumScreen: 54.6875em;
     margin-bottom: 12rem;
     @media screen and (max-width: $mediumScreen) {
         height: 100vh;
+        // border: 5px solid red;
     }
     .img-box {
         display: inline-block;
@@ -21,6 +22,12 @@ $mediumScreen: 54.6875em;
             background-image: url("../.././images/mobile/image-hero.jpg");
         }
     }
+    .Tile-container {
+        @media screen and (max-width: $mediumScreen) {
+            display: flex;
+            align-items: center;
+        }
+    }
     .title {
         color: white;
         font-size: 5.2rem;
@@ -30,6 +37,11 @@ $mediumScreen: 54.6875em;
         margin-left: 12.8rem;
         padding: 2rem 10rem 2rem 4rem;
         line-height: 1.1;
+        @media screen and (max-width: $mediumScreen) {
+            font-size: 3.6rem;
+            margin: 6.4rem 3rem;
+            padding: 2rem 4rem 2rem 2rem;
+        }
         span {
             display: block;
             letter-spacing: 3px;

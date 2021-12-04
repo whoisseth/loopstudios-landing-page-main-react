@@ -1,33 +1,40 @@
-import logo from "./../../images/logo.svg";
 import "./navbar.scss";
-import { Link } from "react-router-dom";
+import menuLogo from "./../../images/icon-hamburger.svg";
+import Media from "react-media";
+import NavLinks from "../navLinks/NavLinks";
+import Logo from "./../logo/Logo";
+const menuStyle = {
+  border: "5px solid red",
+};
+
+function Menu() {
+  return (
+    <div onClick={OpenMenu}>
+      <div className="menu">
+        <img src={menuLogo} alt="Menu" />{" "}
+      </div>
+    </div>
+  );
+}
+function OpenMenu() {
+  return (
+    <div>
+      <div>{console.log("open works")}</div>
+      {/* <NavLinks MenuStyle="Menu-Open" /> */}
+    </div>
+  );
+}
 
 function Navbar() {
   return (
     <div className="navbar">
-      <div className="logo">
-        <Link to="/">
-          <img src={logo} alt="logo" />
-        </Link>
-      </div>
-      <div className="links">
-        <Link className="link" to="/about">
-          About
-        </Link>
-        <Link className="link" to="/careers">
-          Careers
-        </Link>
-        <Link className="link" to="/events">
-          Events
-        </Link>
-        <Link className="link" to="/products">
-          Products
-        </Link>
-        <Link className="link" to="/support">
-          Support
-        </Link>
-      </div>
-      {/* <div></div> */}
+      <Logo />
+      <Media queries={{ MediumScreen: "(max-width: 875px)" }}>
+        {(matches) =>
+          // matches.MediumScreen ? <Menu /> : <NavLinks MenuStyle="styleLink" />
+          matches.MediumScreen ? <Menu /> : <NavLinks />
+        }
+      </Media>
     </div>
   );
 }

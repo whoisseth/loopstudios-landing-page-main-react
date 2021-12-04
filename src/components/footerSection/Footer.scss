@@ -36,6 +36,9 @@ $mediumScreen: 54.6875em;
                 align-items: center;
             }
             .link {
+                @media screen and(max-width: $mediumScreen) {
+                    display: block;
+                }
                 &:hover::after {
                     content: "";
                     position: absolute;

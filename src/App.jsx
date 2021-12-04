@@ -1,5 +1,6 @@
 import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { Routes, Route, Link, BrowserRouter as Router } from "react-router-dom";
 // Importing NavLinks
 import About from "./components/navLinks/About";
 import Careers from "./components/navLinks/Careers";

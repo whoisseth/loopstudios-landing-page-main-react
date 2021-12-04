@@ -3,7 +3,6 @@ $largeScreen: 77.5em;
 // 875px
 $mediumScreen: 54.6875em;
 .GallarySection {
-    // border: 5px solid black;
     display: grid;
     grid-template-columns: (repeat(4, 1fr));
     justify-content: space-between;
@@ -22,7 +21,6 @@ $mediumScreen: 54.6875em;
     .cart {
         font-family: "Josefin Sans", sans-serif;
         width: 23.5rem;
-        // height: 41rem;
         position: relative;
         cursor: pointer;
         overflow: hidden;
