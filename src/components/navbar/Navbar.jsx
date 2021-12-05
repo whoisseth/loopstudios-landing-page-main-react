@@ -12,8 +12,8 @@ function NavLinks(props) {
   //   const [styleLink, styleMenu] = useState("links");
   return (
     <>
-      {/* <div className="links"> */}
-      <div className="links">
+      {/* <div className="links "> */}
+      <div className={props.css}>
         <Link className="link" to="/about">
           About
         </Link>
@@ -33,7 +33,6 @@ function NavLinks(props) {
     </>
   );
 }
-
 //  navLinks End
 
 //
@@ -63,9 +62,12 @@ class Toggle extends React.Component {
             <img src={menuLogo} alt="Menu" />
           ) : (
             <div className="closeMenu">
-              <img src={closeLogo} alt="Menu" />
-              <NavLinks />
-              <h1> Heading 2</h1>
+              <div className="logo-and-Menu">
+                <Logo />
+                <img className="close-img" src={closeLogo} alt="Menu" />
+              </div>
+              <NavLinks css="menuLinks" />
+              {/* <h1> Heading 2</h1> */}
             </div>
           )}
         </div>
@@ -78,14 +80,14 @@ class Toggle extends React.Component {
 function Menu() {
   return <Toggle />;
 }
-function Navbar() {
+function Navbar(props) {
   return (
     <div className="navbar">
       <Logo />
       <Media queries={{ MediumScreen: "(max-width: 875px)" }}>
         {(matches) => (matches.MediumScreen ? <Menu /> : <div></div>)}
       </Media>
-      <NavLinks />
+      <NavLinks css={props.navCss} />
     </div>
   );
 }

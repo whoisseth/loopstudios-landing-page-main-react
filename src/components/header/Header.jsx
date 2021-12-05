@@ -19,7 +19,7 @@ function Header() {
     <div>
       <div className="Header">
         <div className="img-box">
-          <Navbar />
+          <Navbar navCss="links" />
           <Title />
         </div>
       </div>

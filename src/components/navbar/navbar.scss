@@ -1,6 +1,7 @@
 // 875px
 $mediumScreen: 54.6875em;
 .navbar {
+    // position: relative;
     font-family: "Alata", sans-serif;
     margin: 6.4rem 12.8rem;
     align-items: center;
@@ -39,5 +40,44 @@ $mediumScreen: 54.6875em;
     }
     .menu {
         cursor: pointer;
+    }
+    .closeMenu {
+        z-index: 1;
+        // overflow: hidden;
+        margin-left: -50vw;
+        left: 50%;
+        position: fixed;
+        height: 100vh;
+        // height: 100%;
+        width: 100vw;
+        top: 0;
+        // stackoverflow ⬆ code
+        background-color: #000;
+        display: flex;
+        border: 5x solid red;
+        flex-direction: column;
+        .logo-and-Menu {
+            margin: 3.4rem 3rem;
+            // margin-bottom: 8rem;
+            margin-bottom: 12rem;
+            display: flex;
+            justify-content: space-between;
+            .close-img {
+                width: 2.4rem;
+            }
+        }
+        .menuLinks {
+            font-family: "Josefin Sans", sans-serif;
+            margin-left: 3rem;
+            font-size: 3.6rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .link {
+                text-decoration: none;
+                color: hsl(0, 0%, 100%);
+                margin-bottom: 2rem;
+            }
+        }
     }
 }

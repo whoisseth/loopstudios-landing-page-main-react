@@ -41,7 +41,7 @@ function Footer() {
           <div className="navba">
             {/* <Logo />
             <NavLinks /> */}
-            <Navbar />
+            <Navbar navCss="links" />
           </div>
           {/* <Navbar /> */}
         </div>
