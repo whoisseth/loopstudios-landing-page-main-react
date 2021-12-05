@@ -4,9 +4,9 @@ import "./NavLinks.scss";
 function NavLinks(props) {
   //   const [styleLink, styleMenu] = useState("links");
   return (
-    <div>
-      <div className="links">
-        {/* <div className={props.MenuStyle}> */}
+    <>
+      {/* <div className="links"> */}
+      <div className={props.MenuStyle}>
         <Link className="link" to="/about">
           About
         </Link>
@@ -23,7 +23,7 @@ function NavLinks(props) {
           Support
         </Link>
       </div>
-    </div>
+    </>
   );
 }
 

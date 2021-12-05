@@ -38,13 +38,13 @@ function Footer() {
       <div className="Footer">
         {/* left section */}
         <div className="Footer-left-section">
-          <div className="navbar">
-            <Logo />
-            <NavLinks />
+          <div className="navba">
+            {/* <Logo />
+            <NavLinks /> */}
+            <Navbar />
           </div>
           {/* <Navbar /> */}
         </div>
-        {/* right section */}
         <RightSection />
       </div>
     </div>

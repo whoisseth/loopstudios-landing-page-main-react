@@ -92,4 +92,9 @@ $mediumScreen: 54.6875em;
             font-size: 1.3rem;
         }
     }
+    .menu {
+        cursor: pointer;
+        display: none;
+        // border: 2px solid red;
+    }
 }

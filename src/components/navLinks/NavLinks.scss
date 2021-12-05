@@ -10,7 +10,7 @@ $mediumScreen: 54.6875em;
         position: relative;
         // border: 2px solid red;
         @media screen and(max-width: $mediumScreen) {
-            display: none;
+            // display: none;
         }
         &:hover::after {
             content: "";
@@ -19,7 +19,7 @@ $mediumScreen: 54.6875em;
             height: 0.175rem;
             background-color: white;
             left: 0;
-            bottom: 4px;
+            bottom: -4px;
         }
     }
 }
