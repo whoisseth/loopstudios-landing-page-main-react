@@ -1,7 +1,6 @@
 import "./App.scss";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { Routes, Route, Link, BrowserRouter as Router } from "react-router-dom";
-// Importing NavLinks
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+//
 import About from "./components/navLinks/About";
 import Careers from "./components/navLinks/Careers";
 import Events from "./components/navLinks/Events";
@@ -14,20 +13,23 @@ import Footer from "./components/footerSection/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Router>
-        <Routes>
-          <Route path="/about" element={About} />
-          <Route path="/careers" element={Careers} />
-          <Route path="/events" element={Events} />
-          <Route path="/products" element={Products} />
-          <Route path="/support" element={Support} />
-        </Routes>
-        <Header />
-        <MainSection />
-        <Footer />
+        <div className="App">
+          <Switch>
+            <Route path="/" exact />
+            <Route path="/about" component={About} />
+            <Route path="/careers" component={Careers} />
+            <Route path="/events" component={Events} />
+            <Route path="/products" component={Products} />
+            <Route path="/support" component={Support} />
+          </Switch>
+          <Header />
+          <MainSection />
+          <Footer />
+        </div>
       </Router>
-    </div>
+    </>
   );
 }
 

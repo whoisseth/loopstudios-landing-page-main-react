@@ -55,13 +55,11 @@ function Desktop() {
     <div>
       <div className="GallarySection">
         {gallaryObj.map((gallary) => (
-          <div className="cart" key={gallaryObj.id}>
-            <img
-              src={gallary.ImageAddress}
-              // src={gallary.ImageAddressMobile}
-              alt={`${gallary.ImageName}`}
-            />
-            <div className="title">{gallary.ImageName}</div>
+          <div key={gallary.id}>
+            <div className="cart" key={gallaryObj.id}>
+              <img src={gallary.ImageAddress} alt={`${gallary.ImageName}`} />
+              <div className="title">{gallary.ImageName}</div>
+            </div>
           </div>
         ))}
       </div>
@@ -74,13 +72,14 @@ function Mobile() {
     <div>
       <div className="GallarySection">
         {gallaryObj.map((gallary) => (
-          <div className="cart" key={gallaryObj.id}>
-            <img
-              // src={gallary.ImageAddress}
-              src={gallary.ImageAddressMobile}
-              alt={`${gallary.ImageName}`}
-            />
-            <div className="title">{gallary.ImageName}</div>
+          <div key={gallary.id}>
+            <div className="cart" key={gallaryObj.id}>
+              <img
+                src={gallary.ImageAddressMobile}
+                alt={`${gallary.ImageName}`}
+              />
+              <div className="title">{gallary.ImageName}</div>
+            </div>
           </div>
         ))}
       </div>

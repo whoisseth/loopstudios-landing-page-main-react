@@ -4,8 +4,6 @@ import fabcebookLogo from "./../../images/icon-facebook.svg";
 import tiwtterLogo from "./../../images/icon-twitter.svg";
 import pinterestLogo from "./../../images/icon-pinterest.svg";
 import instagramLogo from "./../../images/icon-instagram.svg";
-import NavLinks from "../navLinks/NavLinks";
-import Logo from "../logo/Logo";
 
 function RightSection() {
   return (
